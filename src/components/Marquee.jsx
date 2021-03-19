@@ -20,4 +20,8 @@ Marquee.propTypes = {
 
 }
 
+Marquee.defaultProps ={
+    songTitle:"unknown"
+}
+
 export default Marquee

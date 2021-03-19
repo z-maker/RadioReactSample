@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Art.css'
+import './Art.scss'
 
 const Art = props => {
     return (
         <div className="art_container">
-            <img {...props} />
+            <img {...props} alt="" />
+            <img {...props} alt="" />
+            <img {...props} alt="" />
         </div>
     )
 }
@@ -15,3 +17,6 @@ Art.propTypes = {
 }
 
 export default Art
+
+
+

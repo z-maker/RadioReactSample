@@ -18,4 +18,8 @@ Header.propTypes = {
 
 }
 
+Header.defaultProps = {
+    title:<h1>Radio</h1>
+}
+
 export default Header

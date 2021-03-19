@@ -2,6 +2,7 @@ import ic_play from './player/play.svg'
 import ic_pause from './player/pause.svg'
 import ic_listeners from './icons/ic_listeners.svg'
 import app_logo from './img/logo.png'
+import default_art from './img/album_art.png'
 
 const Icons = {
     ic_play,
@@ -10,7 +11,8 @@ const Icons = {
 }
 
 const Images = {
-    app_logo
+    app_logo,
+    default_art,
 }
 
 export {

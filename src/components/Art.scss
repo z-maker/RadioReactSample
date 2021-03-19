@@ -1,0 +1,72 @@
+/* 
+  (IMAGE) PARAMS
+  =================
+  @mixin imgGlitch($name, $intensity, $width, $height, $top, $left)
+  =================
+  1. Namespace
+  2. Intensity
+  3. Width (px)
+  4. Height (px)
+  5. Top (px, abs pos)
+  6. Left (px, abs pos)
+*/
+@mixin imgGlitch($name, $intensity, $width, $height, $top, $left) {
+  $steps: $intensity;
+
+  // Ensure the @keyframes are generated at the root level
+  @at-root {
+    // We need two different ones
+    @for $i from 1 through 2 {
+      @keyframes #{$name}-anim-#{$i} {
+        @for $i from 0 through $steps {
+          #{percentage($i*(1/$steps))} {
+            clip: rect(
+              random($height) + px,
+              $width + px,
+              random($height) + px,
+              0
+            );
+            transform: scale(1.05) skew(random(1) + deg);
+          }
+        }
+      }
+    }
+  }
+
+  > img {
+    width: 250px;
+    height: 250px;
+  }
+  > img:nth-child(2),
+  > img:nth-child(3) {
+    clip: rect(0, 0, 0, 0);
+  }
+  > img:nth-child(2) {
+    left: ($left + 2) + px;
+    animation: #{$name}-anim-1 3s infinite linear alternate-reverse;
+  }
+  > img:nth-child(3) {
+    left: ($left - 2) + px;
+    animation: #{$name}-anim-2 10s infinite linear alternate-reverse;
+  }
+}
+
+.art_container {
+  max-width: 250px;
+  max-height: 250px;
+  width: 250px;
+  height: 250px;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  box-shadow: lightgray 0px 5px 10px 1px;
+  box-sizing: border-box;
+  background-color: white;
+  @include imgGlitch("glitch", 50, 300, 300, 0, 0);
+}
+.art_container img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}

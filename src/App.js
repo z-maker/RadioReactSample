@@ -10,6 +10,7 @@ import Art from "./components/Art";
 import Header from "./components/Header";
 import Icon from "./components/Icon";
 import { getAlbumArtData, getStreamData } from "./services/Icecast";
+import { Images } from "./assets";
 
 function App() {
   // Audio
@@ -26,8 +27,8 @@ function App() {
   let v_array;
 
   const [settings, setsettings] = useState({
-    src: "http://igor.torontocast.com:1940/stream",
-    metadata_url: "http://igor.torontocast.com:1940/status-json.xsl",
+    src: "https://stream.nightride.fm/darksynth.ogg",
+    metadata_url: "https://stream.nightride.fm/darksynth.ogg/status-json.xsl",
     dataUrl: "",
     cro: "anonymous",
   });
@@ -124,11 +125,11 @@ function App() {
       <Particles params={config} />
       {/* Particles always on top */}
       <Header
-        center={<h1>{source.server_name}</h1>}
-        right={<Icon text={source.listeners} text_position="right" />}
+        center={<h1>{source.server_name ? source.server_name : "Radio" }</h1>}
+        right={<Icon text={source.listeners ? source.listeners : "?"} text_position="right" />}
       />
       <div className="container">
-        <Art src={art_data.artWork} />
+        <Art src={art_data.artWork ? art_data.artWork : Images.default_art } />
         <Marquee songTitle={source.title} />
         <PlayButton status={isPlaying} onClick={handlePlayPause} />
       </div>
