@@ -2,8 +2,6 @@
 
 ![image](https://user-images.githubusercontent.com/15724253/111830345-6af69300-88b3-11eb-8701-6dd8da64f667.png)
 
-![image_00](https://user-images.githubusercontent.com/15724253/111727406-75bc1400-8830-11eb-9026-e10a5fcde377.png)
-
 Nota: Permitir mixed content ya que la url del stream de icecast2 esta sobre http
 
 1. Click the lock (caution) icon, then click Site settings.
