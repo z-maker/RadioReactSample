@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import "./style/app.css";
 
 import Particles from "react-particles-js";
@@ -8,7 +8,6 @@ import Marquee from "./components/Marquee";
 import PlayButton from "./components/PlayButton";
 import Art from "./components/Art";
 import Header from "./components/Header";
-import { Images } from "./assets";
 import Icon from "./components/Icon";
 import { getAlbumArtData, getStreamData } from "./services/Icecast";
 
@@ -21,7 +20,7 @@ function App() {
   // Audio nodes
   let v_analyser_node;
   let v_filter_node;
-  let v_gain_node;
+  //let v_gain_node;
 
   let v_bufferLength;
   let v_array;
@@ -61,7 +60,6 @@ function App() {
   };
 
   const handleArt = () => {
-    console.log(source);
     if (source.title) {
       getAlbumArtData(source.title).then(
         (data) => {
