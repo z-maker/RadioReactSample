@@ -70,3 +70,18 @@
   top: 0px;
   right: 0px;
 }
+
+.art_wall {
+  position: fixed;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  z-index: -15;
+}
+
+.art_wall img{
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+}
