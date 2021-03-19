@@ -1,0 +1,62 @@
+.track-info-wpr {
+	max-width: 420px;
+	height: 40px;
+	box-sizing: border-box;
+	color: #000;
+	font-size: 28px;
+	text-align: center;
+	position: relative;
+	margin: 0 10px;
+	margin-top: 16px;
+	padding-top: 3px;
+	overflow: hidden;
+	z-index: 4;
+}
+/* Responsive classes */
+@media only screen and (max-width: 600px) {
+	.track-info-wpr {
+		margin: 28px 42px 0 42px;
+	}
+}
+.marquee {
+    white-space: nowrap;
+    position: relative;
+    transform: translateX(-50%);
+    display: inline-block;
+    left: 50%;
+    padding-top: 0px;
+    animation: linear infinite;
+    overflow: hidden;
+    text-align: left;
+    animation-duration: 10s;
+    animation-name: movement-smooth;
+    animation-direction: normal;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+  }
+  .marquee:hover { 
+      animation-play-state: paused 
+  }
+  .marquee.marquee-speed-custom:before {
+    animation-duration: inherit;
+  }
+  .marquee.marquee-speed-normal:before {
+    animation-duration: 10s;
+  }
+  @keyframes movement-smooth {
+    from {
+      transform: translateX(0%);
+      left: 100%;
+    }
+    to {
+      transform: translateX(-100%);
+      left: 0%;
+    }
+  }
+  .marquee.marquee-movement-smooth:before {
+    animation-name: movement-smooth;
+  }
+  .marquee.marquee-direction-left:before,
+  .marquee.marquee-direction-normal:before {
+    animation-direction: normal;
+  }

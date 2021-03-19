@@ -1,0 +1,21 @@
+.icon{
+    justify-content: center;
+    align-items: center;
+}
+.icon_top{
+    flex-direction: column-reverse;
+}
+.icon_bottom{
+    flex-direction: column;
+}
+.icon_right{
+    flex-direction: row;
+}
+.icon_left{
+    flex-direction: row-reverse;
+}
+.icon span{
+    margin: 4px;
+    font-size: 1.5em;
+    font-weight: bold;
+}

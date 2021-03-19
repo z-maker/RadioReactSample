@@ -1,0 +1,13 @@
+header{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+header div{
+    display: flex;
+    width: 33.33%;
+    justify-content: center;
+}
