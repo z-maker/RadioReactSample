@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Icon from "./components/Icon";
 import { getAlbumArtData, getStreamData } from "./services/Icecast";
 import { Images } from "./assets";
+import Volume from "./components/Volume";
 
 function App() {
   // Audio
@@ -34,7 +35,6 @@ function App() {
   });
 
   const [isPlaying, setisPlaying] = useState(false);
-  const [volume, setvolume] = useState(1.0);
 
   const [source, set_source] = useState({});
   const [art_data, set_art_data] = useState({});
@@ -89,7 +89,7 @@ function App() {
 
     audio.src = settings.src;
     audio.crossOrigin = settings.cro;
-    audio.volume = volume;
+    audio.volume = 1;
 
     mediaSource = audioCtx.createMediaElementSource(audio);
 
@@ -120,6 +120,13 @@ function App() {
     console.log(audio);
   };
 
+  const handleVolume = (val) =>{
+    if(audio){
+      audio.volume = val;
+    }
+  }
+
+
   return (
     <React.Fragment>
       <Particles params={config} />
@@ -132,6 +139,7 @@ function App() {
         <Art src={art_data.artWork ? art_data.artWork : Images.default_art }  />
         <Marquee songTitle={source.title} />
         <PlayButton status={isPlaying} onClick={handlePlayPause} />
+        <Volume onChange={handleVolume} value={1} />
       </div>
     </React.Fragment>
   );

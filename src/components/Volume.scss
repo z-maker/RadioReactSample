@@ -1,0 +1,133 @@
+
+$col: #F75D46;
+$height: 4px;
+
+.speaker {
+  width: 1.5rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.vlCtrl {
+  height: 2.7rem;
+  width: 10rem;
+}
+
+svg, path {
+  user-select: none;
+}
+
+#ctrlCirce {
+  cursor: pointer;
+}
+
+.volElem {
+  fill: none;
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+//Thumb
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+//Thumb new styles
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background: $col;
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background: $col;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 100%;
+  background: $col;
+  cursor: pointer;
+}
+
+//Track
+
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: $height;
+  cursor: pointer;
+  background: $col;
+  border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: $col;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: $height;
+  cursor: pointer;
+  background: $col;
+  border-radius: 1.3px;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: $height;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: $col;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $col;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: $col;
+  border-radius: 2.6px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: $col;
+}
