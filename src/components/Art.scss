@@ -64,6 +64,7 @@
   box-sizing: border-box;
   background-color: white;
   @include imgGlitch("glitch", 50, 300, 300, 0, 0);
+  border-radius: 5%;
 }
 .art_container img {
   position: absolute;

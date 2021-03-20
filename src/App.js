@@ -117,7 +117,6 @@ function App() {
       //togglePlay();
       console.log("pause");
     };
-    console.log(audio);
   };
 
   const handleVolume = (val) =>{
@@ -136,7 +135,7 @@ function App() {
         right={<Icon text={source.listeners ? source.listeners : "?"} text_position="right" />}
       />
       <div className="container">
-        <Art src={art_data.artWork ? art_data.artWork : Images.default_art }  />
+        <Art src={art_data.artWork ? art_data.artWork : Images.app_logo }  />
         <Marquee songTitle={source.title} />
         <PlayButton status={isPlaying} onClick={handlePlayPause} />
         <Volume onChange={handleVolume} value={1} />

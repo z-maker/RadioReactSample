@@ -3,9 +3,12 @@
     cursor: pointer;
     width: 70px;
     height: 70px;
-    box-shadow: lightgray 0px 10px 15px 5px;
+    box-shadow: #d3d3d382 0px 10px 15px 5px;
     box-sizing: border-box;
     margin: 16px;
+    border-radius: 15%;
+    overflow: hidden;
+    border: solid #f75d46 1px;
 }
 .button_pp img{
     width: 100%;

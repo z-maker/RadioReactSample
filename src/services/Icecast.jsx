@@ -5,10 +5,14 @@ export const getStreamData = (url) => {
         const xhr = new XMLHttpRequest();
         xhr.open('GET', url, true);
         xhr.onload = () => {
-            if(xhr.status === 200){
-                resolve (JSON.parse(xhr.responseText))
-            }else{
-                reject(Error(xhr.statusText))
+            try{
+                if(xhr.status === 200){
+                    resolve (JSON.parse(xhr.responseText))
+                }else{
+                    reject(Error(xhr.statusText))
+                }
+            }catch(e){
+                reject (e)
             }
         };
         xhr.onerror = (error) => reject(error);
