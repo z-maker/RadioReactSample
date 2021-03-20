@@ -17,7 +17,7 @@
         "color": "#F75D46"
       },
       "polygon": {
-        "nb_sides": 3
+        "nb_sides": 2
       },
       "image": {
         "src": "img/github.svg",
@@ -40,8 +40,8 @@
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 40,
-        "size_min": 0.1,
+        "speed": 1,
+        "size_min": 5,
         "sync": false
       }
     },
@@ -54,8 +54,8 @@
     },
     "move": {
       "enable": true,
-      "speed": 1,
-      "direction": "top",
+      "speed": 3,
+      "direction": "random",
       "random": false,
       "straight": false,
       "out_mode": "out",

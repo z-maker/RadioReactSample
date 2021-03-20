@@ -10,7 +10,7 @@ const Art = props => {
                 <div className="art_wall">
                     <img {...props} alt="" />
                 </div>}
-            <div className="art_container">
+            <div className="art_container animated bounceInDown">
                 <img {...props} alt="" />
                 <img {...props} alt="" />
                 <img {...props} alt="" />
