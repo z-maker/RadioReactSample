@@ -25,7 +25,7 @@ const PlayButton = ({ onClick, status }) => {
     }
 
     return (
-        <div className="button_pp animated"
+        <div className="button_pp animated nm"
             ref={btnRef}
             onClick={handleClick}
             onMouseDown={handleMouseDown}
