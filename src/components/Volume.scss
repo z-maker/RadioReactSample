@@ -2,15 +2,25 @@
 $col: #F75D46;
 $height: 4px;
 
+.range_container {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
 .speaker {
-  width: 1.5rem;
-  height: 2rem;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
+  display: flex;
 }
 
 .vlCtrl {
-  height: 2.7rem;
-  width: 10rem;
+  height: 24px;
+  width: 100%;
 }
 
 svg, path {

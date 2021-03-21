@@ -11,11 +11,15 @@ body {
   justify-content: center;
 }
 
-
 .nm {
   background: #eef0f4;
-  box-shadow:  10px 10px 20px #b3b4b7,
-               -10px -10px 20px #ffffff;
+  box-shadow: 9.91px 9.91px 15px #bcbec1, -9.91px -9.91px 15px #ffffff;
+}
+
+.nm-ins {
+  background: #eef0f4;
+  box-shadow: inset 9.91px 9.91px 15px #bcbec1,
+    inset -9.91px -9.91px 15px #ffffff;
 }
 
 .container {

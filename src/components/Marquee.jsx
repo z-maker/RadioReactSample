@@ -4,7 +4,7 @@ import './Marquee.css'
 
 const Marquee = ({artistTitle, albumTitle, songTitle}) => {
     return (
-        <div className="track-info-wpr">
+        <div className="track-info-wpr nm">
             <div className="track-info-ctr">
                 <div className="marquee">
                     {artistTitle && <span className="artist-name animated">{artistTitle}</span>}

@@ -21,7 +21,7 @@ const PlayButton = ({ onClick, status }) => {
     }
 
     const handleMouseUp = (e) => {
-        setTimeout(()=>btnRef.current.classList.remove("bounceIn"),500)
+        setTimeout(()=>btnRef.current.classList.remove("bounceIn"),300)
     }
 
     return (

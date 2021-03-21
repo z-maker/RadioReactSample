@@ -38,7 +38,7 @@ const Volume = props => {
     }, [volume])
 
     return (
-        <React.Fragment>
+        <div className="range_container nm">
             <div className="speaker"
                 onMouseDown={handleSpeaker}
             >
@@ -57,7 +57,7 @@ const Volume = props => {
             <div className="vlCtrl">
                 <input onChange={handleSlider} value={volume} min={0} step={0.02} max={1} type="range" name="" id="" />
             </div>
-        </React.Fragment>
+        </div>
     )
 }
 
